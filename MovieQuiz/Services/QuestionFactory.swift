@@ -7,8 +7,9 @@ class QuestionFactory: QuestionFactoryProtocol {
   weak var delegate: QuestionFactoryDelegate?
   private let moviesLoader: MoviesLoading
   
-  init(moviesLoader: MoviesLoading) {
+  init(moviesLoader: MoviesLoading, delegate: QuestionFactoryDelegate) {
     self.moviesLoader = moviesLoader
+    self.delegate = delegate
   }
   
   func requestNextQuestion()  {
